@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p> Click the button to replace the first item in the list<p>
+        <button>Try it</button>
+
+        <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+        </ul>
+
+        <script>
+            document.querySelector('button').addEventListener('click', () => {
+                var newLi = document.createElement('li');
+                newLi.innerHTML = 'Water';
+
+                var parentItem = document.querySelector('ul');  // target element, parent element
+                var oldElem = document.querySelectorAll('ul li');  // element will be deleted
+                parentItem.replaceChild(newLi, oldElem[0]);
+
+            })
+            
+        </script>
+    </body>
+</html>
+
+
+
+<!-- 
+1. step : createElement()
+2. step : innerHTML'e data eklemek
+3. step : attribute eklemek  ( harici atrribute'lari element.setAttribute() metodu ile ekleyecegiz)
+4. step : style css property eklemek
+5. step : olusturulan element'i parent'a eklemek ( body / parent element'e ulasip ekleme islemini yapacagiz.) -->
+
+
+<!-- 
+Adding and Delting Elements :
+-----------------------------
+1. document.createElement(element)  ---     Create an HTML element
+2. document.appendChild(element)	---     Add an HTML element
+3. document.removeChild(element)	---     Remove an HTML element
+4. document.replaceChild(new, old)	---     Replace an HTML element 
+
+-->

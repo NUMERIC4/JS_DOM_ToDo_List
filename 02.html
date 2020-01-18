@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p> Click the button to create a &ltimg&gt element with some attributes<p>
+        <button>Try it</button>
+
+        <script>
+            document.querySelector('button').onclick = () => {
+                var imgElem = document.createElement('img');
+                imgElem.src = 'smiley.gif';
+                imgElem.setAttribute('width', '50px');
+                imgElem.setAttribute('height', '50px');
+                imgElem.style.display = 'block';
+                imgElem.style.margin = '100px';
+                document.body.appendChild(imgElem);
+            }
+            
+        </script>
+    </body>
+</html>
+
+
+
+<!-- 
+1. step : createElement()
+2. step : innerHTML'e data eklemek
+3. step : attribute eklemek  ( harici atrribute'lari element.setAttribute() metodu ile ekleyecegiz)
+4. step : style css property eklemek
+5. step : olusturulan element'i parent'a eklemek ( body / parent element'e ulasip ekleme islemini yapacagiz.) -->
+
+
+<!-- 
+Adding and Delting Elements :
+-----------------------------
+1. document.createElement(element)  ---     Create an HTML element
+2. document.appendChild(element)	---     Add an HTML element
+3. document.removeChild(element)	---     Remove an HTML element
+4. document.replaceChild(new, old)	---     Replace an HTML element 
+
+-->

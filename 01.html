@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+    <body>
+        <p> Click the button to create a &ltp&gt element with some text<p>
+        <button onclick= 'myFunc()'>Try it</button>
+
+        <script>
+            function myFunc (){
+                var pElem = document.createElement('p');
+                pElem.innerHTML = 'This is a new created paragraph element'
+                document.body.appendChild(pElem);
+            }
+        </script>
+    </body>
+</html>
+
+
+
+<!-- 
+1. step : createElement()
+2. step : innerHTML'e data eklemek
+3. step : attribute eklemek  ( harici atrribute'lari element.setAttribute() metodu ile ekleyecegiz)
+4. step : style css property eklemek
+5. step : olusturulan element'i parent'a eklemek ( body / parent element'e ulasip ekleme islemini yapacagiz.) -->
+
+
+<!-- 
+Adding and Delting Elements :
+-----------------------------
+1. document.createElement(element)  ---     Create an HTML element
+2. document.appendChild(element)	---     Add an HTML element
+3. document.removeChild(element)	---     Remove an HTML element
+4. document.replaceChild(new, old)	---     Replace an HTML element 
+
+-->
